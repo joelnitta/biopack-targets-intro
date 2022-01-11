@@ -1,0 +1,160 @@
+---
+title: "Introduction to {targets}"
+author: "Joel Nitta"
+institute: "University of Tokyo"
+date: "2022-01-12"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: xaringan-themer.css
+    seal: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(targets)
+library(tarchetypes)
+library(xaringanthemer)
+```
+
+## データ解析ワークフローを無駄なく、再現可能にするRパッケージ「targets」の紹介
+
+**ニッタ ジョエル**
+
+BioPackathon <span style = 'font-size: 120%;'>2022/01/12</span>
+
+<br><br><img src="https://docs.ropensci.org/targets/logo.svg" alt="drawing" height="350" style="float:right;margin:-200px 0px">
+
+<br><br>https://joelnitta.com
+
+---
+
+## 自己紹介
+
+.pull-left[
+**ニッタ （新田）ジョエル**
+
+@joel_nitta
+
+https://joelnitta.com
+
+- [東京大学岩崎研究室](http://iwasakilab.k.u-tokyo.ac.jp/)
+
+- 特任助教
+
+- 研究テーマ：シダ植物の<br>進化、生態学
+
+- 趣味：マラソン
+]
+
+.pull-right[
+<img src="https://github.com/joelnitta/joelnitta-site/blob/master/static/media/headers/research_img2.jpg?raw=true" alt="drawing" height="400"/>
+]
+
+---
+## 発表のアウトライン
+
+- {targets}の紹介
+
+- ライブコーディング
+
+---
+## ワークフローについて話しましょう
+
+![Hadley Wickham's data analysis workflow chart](images/workflow_1.png)
+
+.footnote[https://r4ds.had.co.nz/]
+
+---
+## ワークフローについて話しましょう
+
+![Hadley Wickham's data analysis workflow chart with icon showing part of it changed](images/workflow_2.png)
+
+ワークフローの**一部が変わってしまったら**、他のところが<br>**どう影響されるのか**？
+
+**どこまでやり直す必要があるのか？**
+
+---
+## 再現性について話しましょう
+
+### あなとのワークフローを再現できますか？
+
+- 今すぐに？
+
+- 数ヶ月（あるいは数年）後に？
+
+- 他の誰かが？
+
+<img src="https://1.bp.blogspot.com/-iG3QVEWl4dE/Wn1Vwtu1PwI/AAAAAAABKE8/8KR9vfXirfU5yXepByewkYZcrWqT-2EtQCLcBGAs/s800/computer_man3_cry.png" alt="drawing" height="250" style="float:right;margin:-100px 0px">
+
+---
+## ワークフロー管理ツールに<br>任せましょう！
+
+たくさんあります：
+
+- `make`（bash）
+- `snakemake`（python）
+- `nextflow`（バイオインフォ系）
+- `cwl`
+
+などなど
+
+<img src="https://2.bp.blogspot.com/-PPJ11CQ_PWM/Wn1VxOyMjvI/AAAAAAABKFA/HzJIje8elW8vhC4iqY1Ad4Hnv7L-RK7UACLcBGAs/s800/computer_man4_laugh.png" alt="drawing" height="250" style="float:right;margin:-150px 0px">
+
+
+---
+
+## {targets}とは？
+
+.pull-left[
+- Rの**ワークフロー管理パケージ**
+
+- ワークフローの**必要なところだけを走らせる**
+
+- ワークフローを書く段階で<br>**パラレル化する**
+
+- 計算結果がコードとデータと一致していることを証明する
+]
+
+<img src="https://docs.ropensci.org/targets/logo.svg" alt="drawing" height="350" style="float:right">
+
+
+---
+## Resources 資料
+
+- Github https://github.com/ropensci/targets
+
+- Package website https://docs.ropensci.org/targets/
+
+- User manual https://books.ropensci.org/targets/
+
+- Targetopia https://wlandau.github.io/targetopia/
+
+- {tarchetypes} website https://docs.ropensci.org/tarchetypes/
+
+- [@u_ribo](https://twitter.com/u_ribo)さんの[発表](https://speakerdeck.com/s_uryu/workflow-management-with-targets)
+
+---
+## Live Coding
+
+- `tar_script()`: ワークフロープランを書く
+
+- `tar_visnetwork()`: ワークフローロを確認する
+
+- `tar_make()`: ワークフローを実行する
+
+- `tar_load()`: ターゲットを読み込む
+
+- `tar_outdated()`：次回走らせるところを予測する
+
+---
+class: inverse, center, middle
+
+# Live Coding
+
+---
+## まとめ
