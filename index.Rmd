@@ -165,7 +165,7 @@ https://github.com/joelnitta/targets_gapminder_example
 
 - `_targets.R`にワークフロープランを書く
 
-- `tar_run()`でワークフローを走らせる
+- `tar_make()`でワークフローを走らせる
 
 - `tar_visnetwork()`でワークフローの状況を可視化する
 
