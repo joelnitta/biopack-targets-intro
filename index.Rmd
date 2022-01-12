@@ -158,9 +158,15 @@ class: inverse, center, middle
 # Live Coding
 
 ---
-## gapminderの例
+## targetsワークフローの例
+
+### gapminder workflow
 
 https://github.com/joelnitta/targets_gapminder_example
+
+### variant calling workflow
+
+https://github.com/joelnitta/targets_vcf_example
 
 ---
 ## まとめ
@@ -182,4 +188,3 @@ User manual https://books.ropensci.org/targets/
 class: inverse, center, middle
 
 # ご清聴ありがとう<br>ございました
-
