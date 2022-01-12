@@ -179,5 +179,5 @@ User manual https://books.ropensci.org/targets/
 ---
 class: inverse, center, middle
 
-# ご清聴ありがとうございました
+# ご清聴ありがとう<br>ございました
 
