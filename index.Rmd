@@ -137,6 +137,8 @@ https://joelnitta.com
 
 - [@u_ribo](https://twitter.com/u_ribo)さんの[発表](https://speakerdeck.com/s_uryu/workflow-management-with-targets)
 
+- ニッタの[Workflow Meetup発表](https://joelnitta.github.io/workflow-meetup-targets-intro)
+
 ---
 ## Live Coding
 
